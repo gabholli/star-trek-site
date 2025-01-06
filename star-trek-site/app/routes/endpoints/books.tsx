@@ -7,9 +7,8 @@ export async function clientLoader({ request }: LoaderFunctionArgs) {
     const url = new URL(request.url)
     const pageNumber = parseInt(url.searchParams.get("pageNumber") ?? "1", 10)
     const pageSize = parseInt(url.searchParams.get("pageSize") ?? "10", 10)
-    const searchQuery = url.searchParams.get("query") ?? ""
 
-    const response = await fetch(`https://stapi.co/api/v2/rest/book/search?pageNumber=${pageNumber}&pageSize=${pageSize}&title=${searchQuery}`)
+    const response = await fetch(`https://stapi.co/api/v2/rest/book/search?pageNumber=${pageNumber}&pageSize=${pageSize}`)
     const data = await response.json()
 
     const totalResults = data.page?.totalElements ?? 0
@@ -31,7 +30,7 @@ export default function Books() {
     console.log("Current Page:", pageNumber)
 
     function handlePageChange(page: number) {
-        navigate(`?pageNumber=${page}&pageSize=${pageSize}&query=${searchParams.get("query") ?? ""}`)
+        navigate(`?pageNumber=${page}&pageSize=${pageSize}`)
     }
 
     function handleNextGroup() {
@@ -79,7 +78,8 @@ export default function Books() {
                 <button type="submit">Search</button>
             </Form> */}
             <h1 className="text-center underline text-3xl">List of books:</h1>
-            <div className="flex flex-col justify-center items-center text-center text-2xl gap-y-4">
+            <div className="flex flex-col justify-center items-center text-center text-2xl gap-y-4
+                md:grid Md:grid-cols-2">
                 {bookMap}
             </div>
             <div className="flex flex-col justify-center items-center gap-y-4">
