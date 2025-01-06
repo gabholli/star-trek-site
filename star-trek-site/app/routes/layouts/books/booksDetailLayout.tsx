@@ -1,12 +1,6 @@
 import { Link, Outlet } from 'react-router'
 
-export default function Layout() {
-    // const navigate = useNavigate()
-
-    // function goToPrevious(event: { preventDefault: () => void }) {
-    //     event.preventDefault()
-    //     navigate(-1)
-    // }
+export default function BooksLayout() {
 
     return (
         <div className='bg-stars bg-cover bg-center flex flex-col bg-slate-800 text-white min-h-dvh'>
@@ -18,12 +12,11 @@ export default function Layout() {
                     >
                         Home
                     </Link>
-                    {/* <Link
-                        to="/#"
-                        onClick={goToPrevious}
+                    <Link
+                        to="/books"
                         className="lg:hover:underline"
-                    >Go back
-                    </Link> */}
+                    >Books List
+                    </Link>
                 </div>
             </nav>
             <main className='flex-1 p-4 flex justify-center items-center'>
