@@ -45,7 +45,12 @@ export default function Books() {
 
     const bookMap = books?.map((book: Book) => (
         <div key={book.uid}>
-            <Link to={book.uid}>{book.title}</Link>
+            <Link
+                to={book.uid}
+                className="lg:hover:underline"
+            >
+                {book.title}
+            </Link>
         </div>
     ))
 
@@ -58,7 +63,8 @@ export default function Books() {
             <button
                 key={i}
                 onClick={() => handlePageChange(i)}
-                className={i === pageNumber ? "active" : ""}
+                // className={i === pageNumber ? "active" : ""}
+                className="lg:hover:underline"
             >
                 {i}
             </button>
@@ -79,7 +85,7 @@ export default function Books() {
             </Form> */}
             <h1 className="text-center underline text-3xl">List of books:</h1>
             <div className="flex flex-col justify-center items-center text-center text-2xl gap-y-4
-                md:grid Md:grid-cols-2">
+                md:grid Md:grid-cols-2 ">
                 {bookMap}
             </div>
             <div className="flex flex-col justify-center items-center gap-y-4">
@@ -92,8 +98,20 @@ export default function Books() {
                     )}
                 </div> */}
                 <div className="flex gap-x-4">
-                    {pageGroup > 0 && (<button onClick={handlePreviousGroup}>{"<<<"}</button>)}
-                    {pageGroup < Math.ceil(totalPages / 10) - 1 && (<button onClick={handleNextGroup}>{">>>"}</button>)}
+                    {pageGroup > 0 && (
+                        <button
+                            onClick={handlePreviousGroup}
+                            className="lg:hover:underline"
+                        >
+                            {"<<<"}
+                        </button>)}
+                    {pageGroup < Math.ceil(totalPages / 10) - 1 && (
+                        <button
+                            onClick={handleNextGroup}
+                            className="lg:hover:underline"
+                        >
+                            {">>>"}
+                        </button>)}
                 </div>
                 <div className="flex flex-wrap gap-4 justify-center">
                     {pageButtons}

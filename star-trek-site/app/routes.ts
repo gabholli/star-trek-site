@@ -6,6 +6,7 @@ export default [
     ]),
     layout("routes/layouts/layout.tsx", [
         route("endpoints", "routes/endpoints/endpoints.tsx"),
-        route("books", "routes/endpoints/books.tsx"),
+        route("books", "routes/endpoints/books/books.tsx"),
+        route("books/:bookId", "routes/endpoints/books/bookDetail.tsx")
     ]),
 ] satisfies RouteConfig
