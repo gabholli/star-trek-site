@@ -95,7 +95,7 @@ export default function Books() {
                     {pageGroup > 0 && (<button onClick={handlePreviousGroup}>{"<<<"}</button>)}
                     {pageGroup < Math.ceil(totalPages / 10) - 1 && (<button onClick={handleNextGroup}>{">>>"}</button>)}
                 </div>
-                <div className="grid grid-cols-5 gap-4 md:flex">
+                <div className="flex flex-wrap gap-4 justify-center">
                     {pageButtons}
                 </div>
             </div>
