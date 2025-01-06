@@ -35,7 +35,9 @@ export default function Books() {
     }
 
     function handleNextGroup() {
-        setPageGroup(pageGroup + 1)
+        if ((pageGroup + 1) * 10 < totalPages) {
+            setPageGroup(pageGroup + 1)
+        }
     }
 
     function handlePreviousGroup() {
@@ -65,7 +67,7 @@ export default function Books() {
     }
 
     return (
-        <main>
+        <main className="flex flex-col justify-center items-center gap-y-4">
             {/* <Form method="get">
                 <input
                     className="text-black"
@@ -76,18 +78,26 @@ export default function Books() {
                 />
                 <button type="submit">Search</button>
             </Form> */}
-            <h1>List of books:</h1>
-            <div>{bookMap}</div>
-            <div>
-                {pageGroup > 0 && (<button onClick={handlePreviousGroup}>Previous 10</button>)}
-                {pageNumber > 1 && (
-                    <button onClick={() => handlePageChange(pageNumber - 1)}>Previous</button>
-                )}
-                {pageButtons}
-                {pageNumber < totalPages && (
-                    <button onClick={() => handlePageChange(pageNumber + 1)}>Next</button>
-                )}
-                {pageGroup < Math.floor(totalPages / 10) && (<button onClick={handleNextGroup}>Next 10</button>)}
+            <h1 className="text-center underline text-3xl">List of books:</h1>
+            <div className="flex flex-col justify-center items-center text-center text-2xl gap-y-4">
+                {bookMap}
+            </div>
+            <div className="flex flex-col justify-center items-center gap-y-4">
+                {/* <div className="flex gap-x-4">
+                    {pageNumber > 1 && (
+                        <button onClick={() => handlePageChange(pageNumber - 1)}>Previous</button>
+                    )}
+                    {pageNumber < totalPages && (
+                        <button onClick={() => handlePageChange(pageNumber + 1)}>Next</button>
+                    )}
+                </div> */}
+                <div className="flex gap-x-4">
+                    {pageGroup > 0 && (<button onClick={handlePreviousGroup}>{"<<<"}</button>)}
+                    {pageGroup < Math.ceil(totalPages / 10) - 1 && (<button onClick={handleNextGroup}>{">>>"}</button>)}
+                </div>
+                <div className="grid grid-cols-5 gap-4 md:flex">
+                    {pageButtons}
+                </div>
             </div>
         </main>
     )

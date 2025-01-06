@@ -16,6 +16,9 @@ export default {
           '"Noto Color Emoji"',
         ],
       },
+      flex: {
+        "30": "0 1 30%"
+      }
     },
   },
   plugins: [],
