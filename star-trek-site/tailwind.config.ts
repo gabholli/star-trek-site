@@ -18,6 +18,9 @@ export default {
       },
       flex: {
         "30": "0 1 30%"
+      },
+      backgroundImage: {
+        "stars": "url('/milky way.jpg')",
       }
     },
   },
