@@ -15,7 +15,7 @@ export default function BooksLayout() {
                     <Link
                         to="/books"
                         className="lg:hover:underline"
-                    >Books List
+                    >Go Back
                     </Link>
                 </div>
             </nav>
