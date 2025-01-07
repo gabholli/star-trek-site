@@ -7,12 +7,8 @@ export default [
     ]),
     layout("routes/layouts/layout.tsx", [
         route("endpoints", "routes/endpoints/endpoints.tsx"),
-    ]),
-    layout("routes/layouts//books/booksListLayout.tsx", [
         route("books", "routes/endpoints/books/books.tsx"),
-    ]),
-    layout("routes/layouts/books/booksDetailLayout.tsx", [
         route("books/:bookId", "routes/endpoints/books/bookDetail.tsx")
-    ])
+    ]),
 
 ] satisfies RouteConfig

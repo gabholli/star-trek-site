@@ -1,12 +1,12 @@
-import { Link, Outlet } from 'react-router'
+import { Link, Outlet, useNavigate } from 'react-router'
 
 export default function Layout() {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
-    // function goToPrevious(event: { preventDefault: () => void }) {
-    //     event.preventDefault()
-    //     navigate(-1)
-    // }
+    function goToPrevious(event: { preventDefault: () => void }) {
+        event.preventDefault()
+        navigate(-1)
+    }
 
     return (
         <div className='bg-stars bg-cover bg-center flex flex-col bg-slate-800 text-white min-h-dvh'>
@@ -18,12 +18,12 @@ export default function Layout() {
                     >
                         Home
                     </Link>
-                    {/* <Link
+                    <Link
                         to="/#"
                         onClick={goToPrevious}
                         className="lg:hover:underline"
                     >Go back
-                    </Link> */}
+                    </Link>
                 </div>
             </nav>
             <main className='flex-1 p-4 flex justify-center items-center'>
