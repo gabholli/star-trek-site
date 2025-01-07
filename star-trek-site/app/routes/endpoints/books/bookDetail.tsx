@@ -16,7 +16,7 @@ export default function BookDetail() {
         <main className="flex flex-col justify-center items-center text-center
          gap-y-4">
             <h1 className="text-3xl">Details about {data.book.title}:</h1>
-            <div className="flex flex-col justify0-center items-centers gap-y-4 text-2xl text-center">
+            <div className="flex flex-col justify-center items-center gap-y-4 text-2xl text-center">
                 {data.book.publishedMonth && data.book.publishedDay && data.book.publishedYear && (
                     <h2>
                         Publish date: {data.book.publishedMonth}/{data.book.publishedDay}/{data.book.publishedYear}
@@ -28,6 +28,16 @@ export default function BookDetail() {
                 {data.book.audiobook !== undefined && data.book.audiobook !== null &&
                     <h2>Audiobook available: {data.book.audiobook ? "Yes" : "No"}</h2>
                 }
+                {data.book.authors.length > 0 && (
+                    <div className="flex flex-col md:flex-row items-center gap-x-2">
+                        <h2>Authors: </h2>
+                        {data.book.authors && data.book.authors?.map((author: any, index: number) => (
+                            <h2 key={author.uid}>
+                                {author.name}
+                                {index < data.book.authors.length - 1 && ","}</h2>
+                        ))}
+                    </div>
+                )}
             </div>
         </main>
     )
