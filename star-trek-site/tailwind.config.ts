@@ -15,7 +15,7 @@ export default {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
-        lato: ["Lato", "san-serif"]
+        lato: ["Lato", "sans-serif"]
       },
       flex: {
         "30": "0 1 30%"
