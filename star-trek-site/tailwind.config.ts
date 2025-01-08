@@ -15,13 +15,14 @@ export default {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        lato: ["Lato", "san-serif"]
       },
       flex: {
         "30": "0 1 30%"
       },
       backgroundImage: {
         "stars": "url('/milky way.jpg')",
-      }
+      },
     },
   },
   plugins: [],

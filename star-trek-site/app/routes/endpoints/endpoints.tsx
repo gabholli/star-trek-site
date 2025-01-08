@@ -6,8 +6,19 @@ export default function Endpoints() {
       <div className="text-3xl font-bold">
         <h1>Select a category:</h1>
       </div>
-      <main className="text-2xl flex flex-col justify-center items-center lg:hover:underline">
-        <Link to="/books">Books</Link>
+      <main className="text-2xl flex flex-col justify-center items-center gap-y-4">
+        <Link
+          className=" lg:hover:underline"
+          to="/books"
+        >
+          Books
+        </Link>
+        <Link
+          className=" lg:hover:underline"
+          to="/episodes"
+        >
+          Episodes
+        </Link>
       </main>
     </div>
   )
