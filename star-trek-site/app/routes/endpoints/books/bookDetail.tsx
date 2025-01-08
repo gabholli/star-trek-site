@@ -52,7 +52,7 @@ export default function BookDetail() {
                     <h2><span className="text-2xl">Number of pages: </span>{data.book.numberOfPages}</h2>
                 }
                 {data.book.publishers.length > 0 && (
-                    <div className="flex flex-col items-center gap-2">
+                    <div className="flex flex-col items-center lg:flex-row gap-2">
                         <h2 className="text-2xl">Publishers: </h2>
                         {data.book.publishers && data.book.publishers?.map((publishers: any, index: number) => (
                             <h2 key={publishers.uid}>
