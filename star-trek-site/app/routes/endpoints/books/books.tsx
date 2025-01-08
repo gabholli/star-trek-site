@@ -83,7 +83,7 @@ export default function Books() {
                 />
                 <button type="submit">Search</button>
             </Form> */}
-            <h1 className="text-center underline text-3xl">List of books:</h1>
+            <h1 className="text-center underline text-3xl font-bold">List of books:</h1>
             <div className="flex flex-col justify-center items-center text-center text-2xl gap-y-4
                 md:grid Md:grid-cols-2 ">
                 {bookMap}

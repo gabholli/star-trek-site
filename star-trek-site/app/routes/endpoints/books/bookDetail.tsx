@@ -15,7 +15,7 @@ export default function BookDetail() {
     return (
         <main className="flex flex-col justify-center items-center text-center
          gap-y-4">
-            <h1 className="text-3xl">Details about {data.book.title}:</h1>
+            <h1 className="text-3xl font-bold">Details about {data.book.title}:</h1>
             <div className="flex flex-col justify-center items-center gap-y-4 text-2xl text-center">
                 {data.book.publishedMonth && data.book.publishedDay && data.book.publishedYear && (
                     <h2>

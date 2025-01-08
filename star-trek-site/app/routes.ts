@@ -1,5 +1,4 @@
 import { type RouteConfig, index, layout, route } from "@react-router/dev/routes"
-import Endpoints from "./routes/endpoints/endpoints"
 
 export default [
     layout("routes/layouts/homeLayout.tsx", [
