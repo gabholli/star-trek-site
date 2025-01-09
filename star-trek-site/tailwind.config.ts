@@ -22,6 +22,7 @@ export default {
       },
       backgroundImage: {
         "stars": "url('/milky way.jpg')",
+        "stars2": "url('/galaxy.webp')"
       },
     },
   },
