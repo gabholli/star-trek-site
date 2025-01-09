@@ -19,6 +19,12 @@ export default function Endpoints() {
         >
           Episodes
         </Link>
+        <Link
+          className=" lg:hover:underline"
+          to="/movies"
+        >
+          Movies
+        </Link>
       </main>
     </div>
   )
