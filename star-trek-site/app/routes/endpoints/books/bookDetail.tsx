@@ -32,7 +32,9 @@ export default function BookDetail() {
                     <div className="flex flex-col md:flex-row items-center md:gap-x-2 gap-y-2">
                         <h2 className="text-2xl">Authors: </h2>
                         {data.book.authors && data.book.authors?.map((author: any, index: number) => (
-                            <h2 key={author.uid}>
+                            <h2
+                                className="self-end text-xl"
+                                key={author.uid}>
                                 {author.name}
                                 {index < data.book.authors.length - 1 && ","}</h2>
                         ))}
@@ -42,7 +44,9 @@ export default function BookDetail() {
                     <div className="flex flex-col lg:flex-row lg:w-96 justify-center items-center gap-2 flex-wrap">
                         <h2 className="text-2xl">Characters: </h2>
                         {data.book.characters && data.book.characters?.map((characters: any, index: number) => (
-                            <h2 key={characters.uid}>
+                            <h2
+                                className="self-end text-xl"
+                                key={characters.uid}>
                                 {characters.name}
                                 {index < data.book.characters.length - 1 && ","}</h2>
                         ))}
@@ -55,7 +59,9 @@ export default function BookDetail() {
                     <div className="flex flex-col items-center lg:flex-row gap-2">
                         <h2 className="text-2xl">Publishers: </h2>
                         {data.book.publishers && data.book.publishers?.map((publishers: any, index: number) => (
-                            <h2 key={publishers.uid}>
+                            <h2
+                                className="self-end text-xl"
+                                key={publishers.uid}>
                                 {publishers.name}
                                 {index < data.book.publishers.length - 1 && ","}</h2>
                         ))}
