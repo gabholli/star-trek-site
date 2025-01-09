@@ -9,7 +9,7 @@ export default function Layout() {
     }
 
     return (
-        <div className='font-lato bg-stars bg-cover bg-center flex flex-col bg-slate-800 text-white min-h-dvh'>
+        <div className='font-lato bg-cover bg-center flex flex-col bg-slate-800 text-white min-h-dvh'>
             <nav className='flex justify-center py-4 border-b-2 border-white'>
                 <div className="flex text-xl gap-x-8">
                     <Link
