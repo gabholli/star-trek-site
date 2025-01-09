@@ -33,7 +33,7 @@ export default function BookDetail() {
                         <h2 className="text-2xl">Authors: </h2>
                         {data.book.authors && data.book.authors?.map((author: any, index: number) => (
                             <h2
-                                className="self-end text-xl"
+                                className="lg:self-end text-xl"
                                 key={author.uid}>
                                 {author.name}
                                 {index < data.book.authors.length - 1 && ","}</h2>
@@ -45,7 +45,7 @@ export default function BookDetail() {
                         <h2 className="text-2xl">Characters: </h2>
                         {data.book.characters && data.book.characters?.map((characters: any, index: number) => (
                             <h2
-                                className="self-end text-xl"
+                                className="lg:self-end text-xl"
                                 key={characters.uid}>
                                 {characters.name}
                                 {index < data.book.characters.length - 1 && ","}</h2>
@@ -60,7 +60,7 @@ export default function BookDetail() {
                         <h2 className="text-2xl">Publishers: </h2>
                         {data.book.publishers && data.book.publishers?.map((publishers: any, index: number) => (
                             <h2
-                                className="self-end text-xl"
+                                className="lg:self-end text-xl"
                                 key={publishers.uid}>
                                 {publishers.name}
                                 {index < data.book.publishers.length - 1 && ","}</h2>
