@@ -10,7 +10,8 @@ export default [
         route("books/:bookId", "routes/endpoints/books/bookDetail.tsx"),
         route("episodes", "routes/endpoints/episodes/episodes.tsx"),
         route("episodes/:episodeId", "routes/endpoints/episodes/episodeDetail.tsx"),
-        route("movies", "routes/endpoints/movies/movies.tsx")
+        route("movies", "routes/endpoints/movies/movies.tsx"),
+        route("movies/:movieId", "routes/endpoints/movies/movieDetail.tsx")
     ]),
 
 ] satisfies RouteConfig
