@@ -42,7 +42,7 @@ export default function EpisodeDetail() {
                     </div>
                 )}
                 {data.episode.season.numberOfEpisodes &&
-                    <h2><span className="text-2xl">Number of episodes: </span>{data.episode.season.numberOfEpisodes}</h2>
+                    <h2><span className="text-2xl">Episode number: </span>{data.episode.season.numberOfEpisodes}</h2>
                 }
                 {data.episode.season.seasonNumber &&
                     <h2><span className="text-2xl">Season number: </span>{data.episode.season.seasonNumber}</h2>
