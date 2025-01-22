@@ -15,7 +15,7 @@ export default function EpisodeDetail() {
     return (
         <main className="flex flex-col justify-center items-center text-center
          gap-y-4">
-            <h1 className="text-3xl font-bold">Details about: {data.episode.title}</h1>
+            <h1 className="text-3xl font-bold">Details about {data.episode.title}:</h1>
             <div className="flex flex-col justify-center items-center gap-y-4 text-xl text-center">
                 {data.episode.characters.length > 0 && (
                     <div className="flex flex-col lg:flex-row lg:w-96 justify-center items-center gap-2 flex-wrap">
