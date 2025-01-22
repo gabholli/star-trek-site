@@ -20,7 +20,6 @@ export async function clientLoader({ request }: LoaderFunctionArgs) {
 
 export default function Books() {
     const { books, totalPages } = useLoaderData()
-    const navigate = useNavigate()
     const searchParams = new URLSearchParams(window.location.search)
     const pageNumber = parseInt(searchParams.get("pageNumber") ?? "1", 10)
     const pageSize = parseInt(searchParams.get("pageSize") ?? "10", 10)
