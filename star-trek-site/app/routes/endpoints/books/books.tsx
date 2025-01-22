@@ -2,6 +2,7 @@ import { useState } from "react"
 import type { LoaderFunctionArgs } from "react-router"
 import { Form, Link, useLoaderData, useNavigate } from "react-router"
 import type { Book } from "~/types/types"
+import Pagination from "~/utils/Pagination"
 
 export async function clientLoader({ request }: LoaderFunctionArgs) {
     const url = new URL(request.url)
@@ -25,23 +26,6 @@ export default function Books() {
     const pageSize = parseInt(searchParams.get("pageSize") ?? "10", 10)
 
     const [pageGroup, setPageGroup] = useState(Math.floor((pageNumber - 1) / 10))
-    console.log("Total Pages:", totalPages)
-
-    console.log("Current Page:", pageNumber)
-
-    function handlePageChange(page: number) {
-        navigate(`?pageNumber=${page}&pageSize=${pageSize}`)
-    }
-
-    function handleNextGroup() {
-        if ((pageGroup + 1) * 10 < totalPages) {
-            setPageGroup(pageGroup + 1)
-        }
-    }
-
-    function handlePreviousGroup() {
-        setPageGroup(Math.max(pageGroup - 1, 0))
-    }
 
     const bookMap = books?.map((book: Book) => (
         <div key={book.uid}>
@@ -53,23 +37,6 @@ export default function Books() {
             </Link>
         </div>
     ))
-
-    const startPage = pageGroup * 10 + 1
-    const endPage = Math.min(startPage + 9, totalPages)
-
-    const pageButtons = []
-    for (let i = startPage; i <= endPage; i++) {
-        pageButtons.push(
-            <button
-                key={i}
-                onClick={() => handlePageChange(i)}
-                // className={i === pageNumber ? "active" : ""}
-                className="lg:hover:underline"
-            >
-                {i}
-            </button>
-        )
-    }
 
     return (
         <main className="flex flex-col justify-center items-center gap-y-4">
@@ -88,35 +55,13 @@ export default function Books() {
                 md:grid Md:grid-cols-2 ">
                 {bookMap}
             </div>
-            <div className="flex flex-col justify-center items-center gap-y-4">
-                {/* <div className="flex gap-x-4">
-                    {pageNumber > 1 && (
-                        <button onClick={() => handlePageChange(pageNumber - 1)}>Previous</button>
-                    )}
-                    {pageNumber < totalPages && (
-                        <button onClick={() => handlePageChange(pageNumber + 1)}>Next</button>
-                    )}
-                </div> */}
-                <div className="flex gap-x-4">
-                    {pageGroup > 0 && (
-                        <button
-                            onClick={handlePreviousGroup}
-                            className="lg:hover:underline"
-                        >
-                            {"<<<"}
-                        </button>)}
-                    {pageGroup < Math.ceil(totalPages / 10) - 1 && (
-                        <button
-                            onClick={handleNextGroup}
-                            className="lg:hover:underline"
-                        >
-                            {">>>"}
-                        </button>)}
-                </div>
-                <div className="flex flex-wrap gap-4 justify-center">
-                    {pageButtons}
-                </div>
-            </div>
+            <Pagination
+                totalPages={totalPages}
+                pageNumber={pageNumber}
+                pageSize={pageSize}
+                pageGroup={pageGroup}
+                setPageGroup={setPageGroup}
+            />
         </main>
     )
 }
