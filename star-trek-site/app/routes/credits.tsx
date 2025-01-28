@@ -9,7 +9,7 @@ export default function Credits() {
                 <div className='flex flex-col justify-center items-center gap-y-10 text-center
                 text-xl lg:text-3xl xl:text-3xl px-10'>
                     <p className=''>This project uses the STAPI(Star Trek API) for data from The
-                        'Star Trek' universe.
+                        &lsquo;Star Trek&rsquo; universe.
                     </p>
                     <p>
                         This project is a fan-made demonstration using the STAPI. It
