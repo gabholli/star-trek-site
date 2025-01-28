@@ -3,7 +3,7 @@ import { Link } from "react-router";
 export default function Endpoints() {
   return (
     <div className="flex flex-col justify-center items-center gap-y-4">
-      <div className="text-3xl font-bold">
+      <div className="text-3xl font-bold text-blue-400">
         <h1>Select a category:</h1>
       </div>
       <main className="text-2xl flex flex-col justify-center items-center gap-y-4">

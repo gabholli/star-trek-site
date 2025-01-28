@@ -46,9 +46,8 @@ export default function Movies() {
                 />
                 <button type="submit">Search</button>
             </Form> */}
-            <h1 className="text-center underline text-3xl font-bold">List of movies:</h1>
-            <div className="flex flex-col justify-center items-center text-center text-2xl gap-y-4
-                md:grid Md:grid-cols-2 ">
+            <h1 className="text-center text-3xl font-bold text-blue-400">List of movies:</h1>
+            <div className="flex flex-col justify-center items-center text-center text-2xl gap-y-4">
                 {movieMap}
             </div>
         </main>
