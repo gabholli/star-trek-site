@@ -11,7 +11,8 @@ export default [
         route("episodes", "routes/endpoints/episodes/episodes.tsx"),
         route("episodes/:episodeId", "routes/endpoints/episodes/episodeDetail.tsx"),
         route("movies", "routes/endpoints/movies/movies.tsx"),
-        route("movies/:movieId", "routes/endpoints/movies/movieDetail.tsx")
+        route("movies/:movieId", "routes/endpoints/movies/movieDetail.tsx"),
+        route("credits", "routes/credits.tsx")
     ]),
 
 ] satisfies RouteConfig

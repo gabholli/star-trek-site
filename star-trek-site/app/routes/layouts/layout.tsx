@@ -24,6 +24,12 @@ export default function Layout() {
                         className="lg:hover:underline"
                     >Go back
                     </Link>
+                    <Link
+                        to="/credits"
+                        className='lg:hover:underline'
+                    >
+                        Credits
+                    </Link>
                 </div>
             </nav>
             <main className='flex-1 p-4 flex justify-center items-center'>
