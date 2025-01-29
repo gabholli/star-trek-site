@@ -2,7 +2,7 @@ import { useState } from "react"
 import type { LoaderFunctionArgs } from "react-router"
 import { Form, Link, useLoaderData, useNavigate } from "react-router"
 import type { Book } from "~/types/types"
-import Pagination from "~/utils/Pagination"
+import Pagination from "~/components/Pagination"
 
 export async function clientLoader({ request }: LoaderFunctionArgs) {
     const url = new URL(request.url)

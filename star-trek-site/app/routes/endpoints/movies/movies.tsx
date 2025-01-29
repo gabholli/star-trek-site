@@ -1,7 +1,7 @@
 import { useState } from "react"
 import type { LoaderFunctionArgs } from "react-router"
 import { Form, Link, useLoaderData, useNavigate } from "react-router"
-import type { Book, Episode, Movie } from "~/types/types"
+import type { Movie } from "~/types/types"
 
 export async function clientLoader({ request }: LoaderFunctionArgs) {
     const url = new URL(request.url)
