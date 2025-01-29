@@ -8,8 +8,9 @@ export default function Credits() {
                 <h2 className='text-xl lg:text-5xl xl:text-4xl'>Credits</h2>
                 <div className='flex flex-col justify-center items-center gap-y-10 text-center
                 text-xl lg:text-3xl xl:text-3xl px-10'>
-                    <p className=''>This project uses the STAPI(Star Trek API) for data from The
-                        &apos;Star Trek&apos; universe.
+                    <p className=''>This project uses the STAPI(Star Trek API) and Memory Alpha
+                        for data from The &apos;Star Trek&apos; universe, licensed under
+                        CC BY-NC 4.0.
                     </p>
                     <p>
                         This project is a fan-made demonstration using the STAPI. It
@@ -22,6 +23,12 @@ export default function Credits() {
                         rel="noopener noreferrer"
                     >
                         Original source
+                    </Link>
+                    <Link
+                        className='underline text-xl lg:text-3xl xl:text-3xl'
+                        to="https://creativecommons.org/licenses/by-nc/4.0/deed.en"
+                    >
+                        License
                     </Link>
                 </div>
             </div>
