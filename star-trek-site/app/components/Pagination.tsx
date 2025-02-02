@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router"
+import type { PaginateProps } from "~/types/types"
 
-export default function Paginate({ totalPages, pageNumber, pageSize, pageGroup, setPageGroup }) {
+export default function Paginate({ totalPages, pageNumber, pageSize, pageGroup, setPageGroup }: PaginateProps) {
     const navigate = useNavigate()
 
     function handlePageChange(page: any) {
