@@ -8,19 +8,19 @@ export default function Endpoints() {
       </div>
       <main className="text-2xl flex flex-col justify-center items-center gap-y-10">
         <Link
-          className=" lg:hover:underline border-black rounded-full border-2 py-2 px-4"
+          className=" lg:hover:underline border-black rounded-full border-2 py-2 px-4 shadow-xl"
           to="/books"
         >
           Books
         </Link>
         <Link
-          className=" lg:hover:underline border-black rounded-full border-2 py-2 px-4"
+          className=" lg:hover:underline border-black rounded-full border-2 py-2 px-4 shadow-xl"
           to="/episodes"
         >
           Episodes
         </Link>
         <Link
-          className=" lg:hover:underline border-black rounded-full border-2 py-2 px-4"
+          className=" lg:hover:underline border-black rounded-full border-2 py-2 px-4 shadow-xl"
           to="/movies"
         >
           Movies

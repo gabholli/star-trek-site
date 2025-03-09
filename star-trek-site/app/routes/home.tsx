@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="text-3xl text-center font-bold">Welcome to Star Trek <span className="text-blue-400">Explorer!</span></h1>
         <nav className="text-2xl grid grid-cols-1 place-items-center gap-y-16">
           <Link
-            className="lg:hover:underline border-black border-2 rounded-full px-4 py-2"
+            className="lg:hover:underline border-black border-2 rounded-full px-4 py-2 shadow-xl"
             to="endpoints"
           >
             List of categories
